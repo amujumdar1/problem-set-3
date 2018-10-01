@@ -22,16 +22,27 @@ import java.util.Scanner;
  */
 
 public class ProblemSet3 {
-	
+	private static Scanner in; 
 	/**
 	 * Make sure you're testing your code by calling your methods
 	 * from the main method!
 	 */
 	
 	public static void main(String[] args) {
-		ProblemSet3 ps3 = new ProblemSet3();
+		in = new Scanner(System.in);
+		ProblemSet3 pset3 = new ProblemSet3();
 		
-		ps3.dateFashion();
+		pset3.dateFashion(5, 10);
+		pset3.fizzString("string");
+		pset3.squirrelPlay(70, true);
+		pset3.fizzStringAgain(5);
+		pset3.makeBricks(3, 4, 5);
+		pset3.loneSum(1, 2, 3);
+		pset3.luckySum(1, 2, 3);
+		pset3.factorialFor(15);
+		pset3.factorialWhile(3);
+		pset3.isPrime(20);
+		
 		
 	}
 	
@@ -53,6 +64,24 @@ public class ProblemSet3 {
 	
 	public void dateFashion(int you, int date) {
 		
+		int result;
+		if (you > 10 || you < 0 || date > 10 || date < 0) {
+			System.out.println("Invalid number!");
+		}
+		else if (you <= 2 || date <= 2) {
+			result = 0;
+			System.out.println("NO");
+		}
+		else if (you >= 8 || date >= 8) {
+			result = 2;
+			System.out.println("YES");
+		}
+		else {
+			result = 1;
+			System.out.println("MAYBE");
+		}
+		
+		
 	}
 	
 	/*
@@ -67,6 +96,21 @@ public class ProblemSet3 {
 	 */
 	
 	public void fizzString(String str) {
+		char firstLetter = str.charAt(0);
+		char lastLetter = str.charAt(str.length() - 1);
+		
+		if (firstLetter == 'f' && lastLetter == 'b') {
+			System.out.println("FIZZBUZZ");
+		}
+		else if (firstLetter == 'f') {
+			System.out.println("FIZZ");
+		}
+		else if (lastLetter == 'b') {
+			System.out.println("BUZZ");
+		}
+		else {
+			System.out.println(str);
+		}
 		
 	}
 	
@@ -84,6 +128,22 @@ public class ProblemSet3 {
 	
 	public void squirrelPlay(int temp, boolean isSummer) {
 		
+		if (isSummer) {
+			if (temp >= 60 && temp <= 100) {
+				System.out.println("YES");
+			}
+			else {
+				System.out.println("NO");
+			}
+		}
+		else {
+			if (temp >= 60 && temp <= 90) {
+				System.out.println("YES");
+			}
+			else {
+				System.out.println("NO");
+			}
+		}
 	}
 	
 	/*
@@ -98,7 +158,18 @@ public class ProblemSet3 {
 	 */
 	
 	public void fizzStringAgain(int n) {
-		
+		if (n % 5 == 0 && n % 3 == 0) {
+			System.out.println("FIZZBUZZ");
+		}
+		else if (n % 3 == 0) {
+			System.out.println("FIZZ");
+		}
+		else if (n % 5 == 0) {
+			System.out.println("BUZZ");
+		}
+		else {
+			System.out.println(n + "!");
+		}
 	}
 	
 	/*
@@ -113,6 +184,12 @@ public class ProblemSet3 {
 	 */
 	
 	public void makeBricks(int small, int big, int goal) {
+		int length = small + big * 5;
+		
+		if (length == goal) {
+			System.out.println("YES");
+			return;
+		}
 		
 	}
 	
@@ -126,6 +203,21 @@ public class ProblemSet3 {
 	 */
 	
 	public void loneSum(int a, int b, int c) {
+		if (a == b && b == c && a == c) {
+			System.out.println(0);
+		}
+		else if (a == c) {
+			System.out.println(b);
+		}
+		else if (a == b) {
+			System.out.println(c);
+		}
+		else if (b == c) {
+			System.out.println(a);
+		}
+		else {
+			System.out.println(a + b + c);
+		}
 		
 	}
 	
