@@ -103,18 +103,24 @@ public class ProblemSet3 {
 	 */
 	
 	public void fizzString(String str) {
+		
 		char firstLetter = Character.toLowerCase(str.charAt(0));
+		
 		char lastLetter = Character.toLowerCase(str.charAt(str.length() - 1));
+		
 		
 		if (firstLetter == 'f' && lastLetter == 'b') {
 			System.out.println("FIZZBUZZ");
 		}
+		
 		else if (firstLetter == 'f') {
 			System.out.println("FIZZ");
 		}
+		
 		else if (lastLetter == 'b') {
 			System.out.println("BUZZ");
 		}
+		
 		else {
 			System.out.println(str);
 		}
