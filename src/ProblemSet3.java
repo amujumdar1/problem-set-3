@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * INSTRUCTIONS.
  * 
@@ -27,7 +29,10 @@ public class ProblemSet3 {
 	 */
 	
 	public static void main(String[] args) {
-			
+		ProblemSet3 ps3 = new ProblemSet3();
+		
+		ps3.dateFashion();
+		
 	}
 	
 	/*
