@@ -37,9 +37,9 @@ public class ProblemSet3 {
 		
 		//pset3.fizzStringAgain(5);
 		
-		//pset3.makeBricks(3, 4, 5);
+		pset3.makeBricks(3, 1, 9);
 		
-		//pset3.loneSum(1, 2, 3);
+		//pset3.loneSum(3, 2, 3);
 		
 		//pset3.luckySum(1, 2, 3);
 		
@@ -73,7 +73,6 @@ public class ProblemSet3 {
 		int result;
 		if (you > 10 || you < 0 || date > 10 || date < 0) {
 			System.out.println("Invalid number!");
-			return;
 		}
 		else if (you <= 2 || date <= 2) {
 			result = 0;
@@ -196,15 +195,26 @@ public class ProblemSet3 {
 	
 	public void makeBricks(int small, int big, int goal) {
 		
-		int length = small + big * 5;
-		
-		
-		if (length == goal) {
-			
-			System.out.println("YES");
-			
+		if (small < 0 || big < 0 || goal < 0) {
+			System.out.println("Invalid input!");
 			return;
 		}
+		
+		while (goal >= 5 && big >= 1) {  
+			goal -= 5;
+			big--;
+		}
+		// eliminates as many big bricks as possible to get same answer
+		
+		while (goal >= 1 && small >= 1) {
+			goal -= 5;
+			small--;
+		}
+		// does the same thing with the small bricks
+		
+		String result = (goal == 0) ? "YES" : "NO";
+		
+		System.out.println(result);
 		
 	}
 	
@@ -219,7 +229,7 @@ public class ProblemSet3 {
 	
 	public void loneSum(int a, int b, int c) {
 		
-		if (a == b && b == c && a == c) {
+		if (a == b && b == c) { // law of syllogism 
 			System.out.println(0);
 		}
 		
@@ -280,7 +290,10 @@ public class ProblemSet3 {
 	 */
 	
 	public void factorialFor(int n) {
-		
+		if (n < 0) {
+			System.out.println("Invalid input!");
+			return;
+		}
 		int factorial = 1;
 		
 		for (int x = 1; x < n + 1; x++) {
@@ -301,6 +314,11 @@ public class ProblemSet3 {
 	 */
 	
 	public void factorialWhile(int n) {
+		if (n < 0) {
+			System.out.println("Invalid input!");
+			return;
+		}
+		
 		int factorial = 1;
 		int x = 1;
 		
