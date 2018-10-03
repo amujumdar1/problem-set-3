@@ -50,7 +50,7 @@ public class ProblemSet3 {
 		
 		pset3.factorialWhile(6);
 		
-		pset3.isPrime(199);
+		pset3.isPrime(1999);
 		// very large prime number
 		
 	}
@@ -359,6 +359,7 @@ public class ProblemSet3 {
 		}
 		
 		int factorial = 1;
+		
 		int x = 1;
 		
 		while (x < n + 1) {
@@ -390,13 +391,13 @@ public class ProblemSet3 {
 			return;
 		}
 		
-		for (int x = 2; x <= sqrt(x) ; x++) {
+		for (int x = 2; x * x <= n ; x++) {
 			
 			if (n % x == 0) {
 				
 				System.out.println("NOT PRIME");
 				
-				/* checks all numbers up to square root point, and 
+				/* checks all numbers up to square root point (the peak), and 
 				 * if even one is divisible, is composite */
 				
 				return;
