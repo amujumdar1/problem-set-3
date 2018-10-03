@@ -29,23 +29,26 @@ public class ProblemSet3 {
 	public static void main(String[] args) {
 		ProblemSet3 pset3 = new ProblemSet3();
 		
-		//pset3.dateFashion(5, 10);
+		pset3.dateFashion(2, 9);
+		// special case of one high and low
 		
-		//pset3.fizzString("string");
+		pset3.fizzString("flob");
+		// f and b both there
 		
-		//pset3.squirrelPlay(70, true);
+		pset3.squirrelPlay(100, true);
 		
-		//pset3.fizzStringAgain(5);
+		pset3.fizzStringAgain(15);
+		// divisible by both 3 and 5
 		
 		pset3.makeBricks(3, 1, 9);
 		
-		//pset3.loneSum(3, 2, 3);
+		pset3.loneSum(3, 2, 3);
 		
-		//pset3.luckySum(1, 2, 3);
+		pset3.luckySum(1, 2, 3);
 		
-		//pset3.factorialFor(6);
+		pset3.factorialFor(6);
 		
-		//pset3.factorialWhile(6);
+		pset3.factorialWhile(6);
 		
 		pset3.isPrime(199);
 		// very large prime number
@@ -72,17 +75,25 @@ public class ProblemSet3 {
 		
 		int result;
 		if (you > 10 || you < 0 || date > 10 || date < 0) {
+			
 			System.out.println("Invalid number!");
 		}
+		// negative values can't work
+		
 		else if (you <= 2 || date <= 2) {
+			
 			result = 0;
 			System.out.println("NO");
 		}
+		
 		else if (you >= 8 || date >= 8) {
+			
 			result = 2;
 			System.out.println("YES");
 		}
+		
 		else {
+			
 			result = 1;
 			System.out.println("MAYBE");
 		}
@@ -104,23 +115,28 @@ public class ProblemSet3 {
 	public void fizzString(String str) {
 		
 		char firstLetter = Character.toLowerCase(str.charAt(0));
+		// finds first position in string
 		
 		char lastLetter = Character.toLowerCase(str.charAt(str.length() - 1));
-		
+		// finds last letter in string through built in length function
 		
 		if (firstLetter == 'f' && lastLetter == 'b') {
+			
 			System.out.println("FIZZBUZZ");
 		}
 		
 		else if (firstLetter == 'f') {
+			
 			System.out.println("FIZZ");
 		}
 		
 		else if (lastLetter == 'b') {
+			
 			System.out.println("BUZZ");
 		}
 		
 		else {
+			
 			System.out.println(str);
 		}
 		
@@ -141,6 +157,7 @@ public class ProblemSet3 {
 	public void squirrelPlay(int temp, boolean isSummer) {
 		
 		int upperLimit = (isSummer) ? 100 : 90;
+		// defines upper limit depending on if its summer or not
 		
 		if (temp >= 60 && temp <= upperLimit)  {
 			
@@ -166,18 +183,22 @@ public class ProblemSet3 {
 	public void fizzStringAgain(int n) {
 		
 		if (n % 3 == 0 && n % 5 == 0) {
+			
 			System.out.println("FIZZBUZZ");
 		}
 		
 		else if (n % 3 == 0) {
+			
 			System.out.println("FIZZ");
 		}
 		
 		else if (n % 5 == 0) {
+			
 			System.out.println("BUZZ");
 		}
 		
 		else {
+			
 			System.out.println(n + "!");
 		}
 	}
@@ -196,23 +217,28 @@ public class ProblemSet3 {
 	public void makeBricks(int small, int big, int goal) {
 		
 		if (small < 0 || big < 0 || goal < 0) {
+			
 			System.out.println("Invalid input!");
 			return;
 		}
+		// negative bricks don't exist
 		
 		while (goal >= 5 && big >= 1) {  
+			
 			goal -= 5;
 			big--;
 		}
-		// eliminates as many big bricks as possible to get same answer
+		// eliminates as many big bricks as possible to get same result
 		
 		while (goal >= 1 && small >= 1) {
-			goal -= 5;
+			
+			goal -= 1;
 			small--;
 		}
 		// does the same thing with the small bricks
 		
 		String result = (goal == 0) ? "YES" : "NO";
+		// lowest possible number if the max amount of bricks are gone 
 		
 		System.out.println(result);
 		
@@ -230,22 +256,27 @@ public class ProblemSet3 {
 	public void loneSum(int a, int b, int c) {
 		
 		if (a == b && b == c) { // law of syllogism 
+			
 			System.out.println(0);
 		}
 		
 		else if (a == c) {
+			
 			System.out.println(b);
 		}
 		
 		else if (a == b) {
+			
 			System.out.println(c);
 		}
 		
 		else if (b == c) {
+			
 			System.out.println(a);
 		}
 		
 		else {
+			
 			System.out.println(a + b + c);
 		}
 		
@@ -264,18 +295,22 @@ public class ProblemSet3 {
 	public void luckySum(int a, int b, int c) {
 		
 		if (a == 13) {
+			
 			System.out.println(0);
 		}
 		
 		else if (b == 13) {
+			
 			System.out.println(a);
 		}
 		
 		else if (c == 13) {
+			
 			System.out.println(a + b);
 		}
 		
 		else {
+			
 			System.out.println(a + b + c);
 		}
 	}
@@ -291,9 +326,12 @@ public class ProblemSet3 {
 	
 	public void factorialFor(int n) {
 		if (n < 0) {
+			
 			System.out.println("Invalid input!");
 			return;
 		}
+		// positive integers 
+		
 		int factorial = 1;
 		
 		for (int x = 1; x < n + 1; x++) {
@@ -315,6 +353,7 @@ public class ProblemSet3 {
 	
 	public void factorialWhile(int n) {
 		if (n < 0) {
+			
 			System.out.println("Invalid input!");
 			return;
 		}
@@ -328,6 +367,7 @@ public class ProblemSet3 {
 			
 			x++;
 		}
+		
 		System.out.println(factorial);
 	}
 	
@@ -350,18 +390,19 @@ public class ProblemSet3 {
 			return;
 		}
 		
-		for (int x = 2; x <= n / 2; x++) {
+		for (int x = 2; x <= sqrt(x) ; x++) {
 			
 			if (n % x == 0) {
 				
 				System.out.println("NOT PRIME");
 				
-				/* checks all numbers up to midway point, and 
+				/* checks all numbers up to square root point, and 
 				 * if even one is divisible, is composite */
 				
 				return;
 			}
 		}
+		
 		System.out.println("PRIME");
 		
 	}
