@@ -29,6 +29,11 @@ public class ProblemSet3 {
 	public static void main(String[] args) {
 		ProblemSet3 pset3 = new ProblemSet3();
 		
+		pset3.testFunctions();
+		
+		/* these are previous test cases before the testFunctions method
+		 * 
+		 * 
 		pset3.dateFashion(2, 9);
 		// special case of one high and low
 		
@@ -57,7 +62,7 @@ public class ProblemSet3 {
 		// same as for (consistency)
 		
 		pset3.isPrime(1999);
-		// very large prime number
+		// very large prime number*/
 		
 	}
 	
@@ -190,17 +195,17 @@ public class ProblemSet3 {
 		
 		if (n % 3 == 0 && n % 5 == 0) {
 			
-			System.out.println("FIZZBUZZ");
+			System.out.println("FIZZBUZZ!");
 		}
 		
 		else if (n % 3 == 0) {
 			
-			System.out.println("FIZZ");
+			System.out.println("FIZZ!");
 		}
 		
 		else if (n % 5 == 0) {
 			
-			System.out.println("BUZZ");
+			System.out.println("BUZZ!");
 		}
 		
 		else {
@@ -330,7 +335,7 @@ public class ProblemSet3 {
 	 * factorialFor(5) → 120
 	 */
 	
-	public void factorialFor(int n) {
+	public void factorialWithFor(int n) {
 		
 		if (n < 0) {
 			
@@ -358,7 +363,7 @@ public class ProblemSet3 {
 	 * factorialWhile(5) → 120
 	 */
 	
-	public void factorialWhile(int n) {
+	public void factorialWithWhile(int n) {
 		if (n < 0) {
 			
 			System.out.println("Invalid input!");
@@ -413,5 +418,60 @@ public class ProblemSet3 {
 		
 		System.out.println("PRIME");
 		
+	}
+
+
+	public void testFunctions() {
+	// testing the functions
+		
+		dateFashion(4, 10); // YES.
+		dateFashion(5, 0); // NO.
+		dateFashion(5, 1); // NO.
+		dateFashion(5, 2); // NO.
+		dateFashion(5, 3); // MAYBE.
+		dateFashion(5, 4); // MAYBE.
+		fizzString("fix"); // FIZZ.
+		fizzString("job"); // BUZZ.
+		squirrelPlay(90, false); // YES.
+		squirrelPlay(90, true); // YES.
+		squirrelPlay(91, false); // NO.
+		squirrelPlay(93, false); // NO.
+		squirrelPlay(93, true); // YES.
+		fizzStringAgain(15); // FIZZBUZZ!
+		fizzStringAgain(16); // 16!
+		fizzStringAgain(19); // 19!
+		fizzStringAgain(20); // BUZZ!
+		makeBricks(6, 1, 11); // YES.
+		makeBricks(6, 0, 11); // NO.
+		makeBricks(1, 4, 11); // YES.
+		makeBricks(0, 3, 10); // YES.
+		makeBricks(1, 4, 12); // NO.
+		loneSum(6, 7, 5); // 18.
+		loneSum(6, 7, 6); // 7.
+		loneSum(6, 7, 9); // 22.
+		loneSum(6, 8, 0); // 14.
+		loneSum(6, 8, 1); // 15.
+		loneSum(6, 8, 2); // 16.
+		luckySum(0, 9, 0); // 9.
+		luckySum(0, 9, 1); // 10.
+		luckySum(0, 9, 2); // 11.
+		luckySum(1, 0, 8); // 9.
+		luckySum(1, 0, 9); // 10.
+		factorialWithFor(1); // 1! = 1.
+		factorialWithFor(2); // 2! = 2.
+		factorialWithFor(8); // 8! = 40320.
+		factorialWithFor(9); // 9! = 362880.
+		factorialWithFor(10); // 10! = 3628800.
+		factorialWithWhile(1); // 1! = 1.
+		factorialWithWhile(2); // 2! = 2.
+		factorialWithWhile(10); // 10! = 3628800.
+		isPrime(0); // NOT PRIME.
+		isPrime(1); // NOT PRIME.
+		isPrime(2); // PRIME.
+		isPrime(3); // PRIME.
+		isPrime(4); // NOT PRIME.
+		isPrime(5); // PRIME
+		isPrime(19); // PRIME.
+		isPrime(20); // NOT PRIME.
 	}
 }
