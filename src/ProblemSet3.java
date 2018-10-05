@@ -94,19 +94,19 @@ public class ProblemSet3 {
 		else if (you <= 2 || date <= 2) {
 			
 			result = 0;
-			System.out.println("NO");
+			System.out.println("NO.");
 		}
 		
 		else if (you >= 8 || date >= 8) {
 			
 			result = 2;
-			System.out.println("YES");
+			System.out.println("YES.");
 		}
 		
 		else {
 			
 			result = 1;
-			System.out.println("MAYBE");
+			System.out.println("MAYBE.");
 		}
 		
 		
@@ -133,22 +133,22 @@ public class ProblemSet3 {
 		
 		if (firstLetter == 'f' && lastLetter == 'b') {
 			
-			System.out.println("FIZZBUZZ");
+			System.out.println("FIZZBUZZ.");
 		}
 		
 		else if (firstLetter == 'f') {
 			
-			System.out.println("FIZZ");
+			System.out.println("FIZZ.");
 		}
 		
 		else if (lastLetter == 'b') {
 			
-			System.out.println("BUZZ");
+			System.out.println("BUZZ.");
 		}
 		
 		else {
 			
-			System.out.println(str);
+			System.out.println(str + ".");
 		}
 		
 	}
@@ -172,11 +172,11 @@ public class ProblemSet3 {
 		
 		if (temp >= 60 && temp <= upperLimit)  {
 			
-			System.out.println("YES");
+			System.out.println("YES.");
 		}
 		
 		else {
-			System.out.println("NO");
+			System.out.println("NO.");
 		}
 	}
 	
@@ -248,7 +248,7 @@ public class ProblemSet3 {
 		}
 		// does the same thing with the small bricks
 		
-		String result = (goal == 0) ? "YES" : "NO";
+		String result = (goal == 0) ? "YES." : "NO.";
 		// lowest possible number if the max amount of bricks are gone 
 		
 		System.out.println(result);
@@ -268,27 +268,27 @@ public class ProblemSet3 {
 		
 		if (a == b && b == c) { // law of syllogism 
 			
-			System.out.println(0);
+			System.out.println(0 + ".");
 		}
 		
 		else if (a == c) {
 			
-			System.out.println(b);
+			System.out.println(b + ".");
 		}
 		
 		else if (a == b) {
 			
-			System.out.println(c);
+			System.out.println(c + ".");
 		}
 		
 		else if (b == c) {
 			
-			System.out.println(a);
+			System.out.println(a + ".");
 		}
 		
 		else {
 			
-			System.out.println(a + b + c);
+			System.out.println(a + b + c + ".");
 		}
 		
 	}
@@ -307,22 +307,22 @@ public class ProblemSet3 {
 		
 		if (a == 13) {
 			
-			System.out.println(0);
+			System.out.println(0 + ".");
 		}
 		
 		else if (b == 13) {
 			
-			System.out.println(a);
+			System.out.println(a + ".");
 		}
 		
 		else if (c == 13) {
 			
-			System.out.println(a + b);
+			System.out.println(a + b + ".");
 		}
 		
 		else {
 			
-			System.out.println(a + b + c);
+			System.out.println(a + b + c + ".");
 		}
 	}
 	
@@ -350,7 +350,7 @@ public class ProblemSet3 {
 			
 			factorial *= x;
 		}
-		System.out.println(factorial);
+		System.out.println(factorial + ".");
 	}
 	
 	/*
@@ -381,7 +381,7 @@ public class ProblemSet3 {
 			x++;
 		}
 		
-		System.out.println(factorial);
+		System.out.println(factorial + ".");
 	}
 	
 	/*
@@ -397,7 +397,7 @@ public class ProblemSet3 {
 		
 		if (n < 2) { 
 			
-			System.out.println("NOT PRIME");
+			System.out.println("NOT PRIME.");
 			// this is because 1, 0, and negative numbers are not prime
 			
 			return;
@@ -407,7 +407,7 @@ public class ProblemSet3 {
 			
 			if (n % x == 0) {
 				
-				System.out.println("NOT PRIME");
+				System.out.println("NOT PRIME.");
 				
 				/* checks all numbers up to square root point (the peak), and 
 				 * if even one is divisible, is composite */
@@ -416,7 +416,7 @@ public class ProblemSet3 {
 			}
 		}
 		
-		System.out.println("PRIME");
+		System.out.println("PRIME.");
 		
 	}
 
