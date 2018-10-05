@@ -36,19 +36,25 @@ public class ProblemSet3 {
 		// f and b both there
 		
 		pset3.squirrelPlay(100, true);
+		// just made it
 		
 		pset3.fizzStringAgain(15);
 		// divisible by both 3 and 5
 		
 		pset3.makeBricks(3, 1, 9);
+		// almost works, but doesn't
 		
 		pset3.loneSum(3, 2, 3);
+		// when a and c are invalid
 		
 		pset3.luckySum(1, 2, 3);
+		// just three random numbers
 		
 		pset3.factorialFor(6);
+		// same as while (consistency)
 		
 		pset3.factorialWhile(6);
+		// same as for (consistency)
 		
 		pset3.isPrime(1999);
 		// very large prime number
@@ -115,7 +121,7 @@ public class ProblemSet3 {
 	public void fizzString(String str) {
 		
 		char firstLetter = Character.toLowerCase(str.charAt(0));
-		// finds first position in string
+		// finds first position in string and makes it lower case for consistency
 		
 		char lastLetter = Character.toLowerCase(str.charAt(str.length() - 1));
 		// finds last letter in string through built in length function
@@ -325,6 +331,7 @@ public class ProblemSet3 {
 	 */
 	
 	public void factorialFor(int n) {
+		
 		if (n < 0) {
 			
 			System.out.println("Invalid input!");
